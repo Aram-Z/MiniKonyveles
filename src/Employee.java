@@ -29,4 +29,25 @@ public class Employee {
     public double totalEmployerCost() {
         return grossSalary + calculateSzocho();
     }
+
+    public Employee() {
+    }
+
+
+    @Override
+    public String toString() {
+        return "Név: " + name +
+                "\nBruttó bér: " + grossSalary +
+                "\nSZJA: " + calculateSzja() +
+                "\nTB: " + calculateTb() +
+                "\nSzocho: " + calculateSzocho() +
+                "\nNettó bér: " + calculateNetSalary();
+    }
+
+    public Employee(String name, double grossSalary) {
+        this.name = name;
+        this.grossSalary = grossSalary;
+
+
+    }
 }
